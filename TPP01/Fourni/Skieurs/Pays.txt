@@ -1,0 +1,23 @@
+ALL;Allemagne
+AUT;Autriche
+CAN;Canada
+CDS;Corée du Sud
+CRO;Croatie
+FIN;Finlande
+FRA;France
+GBR;Grande-Bretagne
+HOL;Pays-Bas
+HON;Hongrie
+ITA;Italie
+JAP;Japon
+LIE;Liechtenstein
+NOR;Norvège
+POL;Pologne
+RTC;République tchèque
+RUS;Russie
+SER;Serbie
+SLQ;Slovaquie
+SLV;Slovénie
+SUE;Suède
+SUI;Suisse
+USA;Etats-Unis
