@@ -13,8 +13,8 @@ public class PaysDao {
         String[] tabPays = FileStr.read(FICHIER_PAYS);
         ArrayList aLst = new ArrayList();
         for (int i=0; i<tabPays.length; i++) { 
-            StringTokenizer strT = new StringTokenizer(tabPays[i], ";");
-            aLst.add(new Pays(strT.nextToken(), strT.nextToken()));
+            StringTokenizer strTok = new StringTokenizer(tabPays[i], ";");
+            aLst.add(new Pays(strTok.nextToken(), strTok.nextToken()));
         }
         return aLst;
     }   
