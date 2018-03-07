@@ -3,6 +3,16 @@ package metier;
 import domaine.Pays;
 import java.util.ArrayList;
 import java.util.Observable;
+import java.awt.Toolkit;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 /**
  *
@@ -47,6 +57,12 @@ public class Model extends Observable{
     public void showSkieur(int ind) {
         skiPos = ind;
         setChanged(); notifyObservers(new Action(Action.SEL, skiPos));
+    }
+    
+    public void copyName(String name) {
+        String msg = name;
+        StringSelection ss = new StringSelection(msg);
+        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
     }
     
 }
