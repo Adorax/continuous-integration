@@ -3,6 +3,8 @@ package vue;
 import java.util.logging.Logger;
 import metier.Model;
 import org.slf4j.LoggerFactory;
+import ch.adorax.lib-java;
+
 
 public class FrmMain extends java.awt.Frame {
     
