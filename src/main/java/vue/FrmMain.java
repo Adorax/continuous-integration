@@ -3,22 +3,25 @@ package vue;
 import java.util.logging.Logger;
 import metier.Model;
 import org.slf4j.LoggerFactory;
-import ch.adorax.lib-java;
+import org.testng.annotations.Test;
+//import ch.adorax.lib-java;
 
 
 public class FrmMain extends java.awt.Frame {
-    
+
     Model m = new Model();
-    
+
+    @Test
     public FrmMain() {
+        System.out.println("This is ok");
         initComponents();
         m.addObserver(new ListObserver(lstPays, lstSkieurs, tfNo, tfNom, tfPays, tfPrenom));
         m.loadData();
-        
+
         Logger logger = Logger.getLogger(FrmMain.class.getName());
         logger.info("success");
     }
-   
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
