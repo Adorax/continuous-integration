@@ -164,14 +164,16 @@
       <artifactId>lib-java</artifactId>
       <version>1.0.0</version>
       <scope>system</scope>
-	    <systemPath>${basedir}/../lib-java/target/lib-java.jar</systemPath>
+	    <systemPath>${project.basedir}/src/lib/lib-java.jar</systemPath>
     </dependency>
+
     <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>6.14.2</version>
             <scope>test</scope>
     </dependency>
+
     <dependency>
         <groupId>org.mockito</groupId>
         <artifactId>mockito-core</artifactId>
