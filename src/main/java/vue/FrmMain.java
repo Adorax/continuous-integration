@@ -3,15 +3,13 @@ package vue;
 import java.util.logging.Logger;
 import metier.Model;
 import org.slf4j.LoggerFactory;
-import org.testng.annotations.Test;
 //import ch.adorax.lib-java;
 
 
 public class FrmMain extends java.awt.Frame {
 
     Model m = new Model();
-
-    @Test
+    
     public FrmMain() {
         System.out.println("This is ok");
         initComponents();
