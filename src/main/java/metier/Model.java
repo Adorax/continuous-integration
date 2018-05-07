@@ -51,7 +51,7 @@ public class Model extends Observable{
     public void showSkieurs(int ind) {
         paysPos = ind;
         aLstSkieurs = dao.SkieurDao.getListeSkieurs((Pays)this.getPays(paysPos));
-        setChanged(); notifyObservers(new Action(Action.SEL, NO_POS));
+        //setChanged(); notifyObservers(new Action(Action.SEL, NO_POS));
     }
 
     public void showSkieur(int ind) {
@@ -62,7 +62,7 @@ public class Model extends Observable{
     public void copyName(String name) {
         String msg = name;
         StringSelection ss = new StringSelection(msg);
-        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
+        //Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
     }
     
 }

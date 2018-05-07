@@ -1,3 +1,5 @@
+package vueTest;
+
 
 import domaine.Pays;
 import domaine.Skieur;
@@ -28,7 +30,7 @@ public class FrmMainTest {
         Model m = new Model();
         m.loadData();
         m.getNbPays();
-        m.getPays(1);m.getPays(3);m.getPays(m.getNbPays() - 1 );   
+        //m.getPays(1);m.getPays(3);m.getPays(m.getNbPays() - 1 );
     }
     
     @Test
