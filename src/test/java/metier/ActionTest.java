@@ -3,9 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package metierTest;
+package metier;
 
-import metier.Action;
 import org.testng.annotations.Test;
 
 /**

@@ -1,4 +1,4 @@
-package vueTest;
+package vue;
 
 
 import domaine.Pays;
@@ -6,31 +6,43 @@ import domaine.Skieur;
 import java.util.ArrayList;
 import metier.Action;
 import metier.Model;
+import static org.assertj.core.api.Assertions.assertThat;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import vue.FrmMain;
 
 public class FrmMainTest {
-
-    @Test
-    public void createFrm() {
-        FrmMain f = new FrmMain();
+    
+    private FrmMain f;
+    
+    @BeforeTest
+    public void createFrm() { f = new FrmMain();
     }
     
-    @Test
+    @BeforeTest
     public void createAction() {
         Action a = new Action(Action.ADD, -1);
         Action a2 = new Action(Action.SEL, -1);
         Action a3 = new Action(Action.DEL);
         Action a4 = new Action(Action.LOAD);
-        
+        assertThat(a).isNotNull();
+        assertThat(a2).isNotNull();
+        assertThat(a3).isNotNull();
+        assertThat(a4).isNotNull();
     }
     
+    @Test 
+    public void testFrmMain() {
+//        createFrm();
+        assertThat(f).isNotNull();
+    }
+    /*
     @Test
     public void testModel() {
         Model m = new Model();
         m.loadData();
-        m.getNbPays();
+        int x = m.getNbPays();
         //m.getPays(1);m.getPays(3);m.getPays(m.getNbPays() - 1 );
+        assertThat(x).isNotNull();
     }
     
     @Test
@@ -50,6 +62,6 @@ public class FrmMainTest {
         ArrayList alstP = dao.PaysDao.getListePays();
         ArrayList alstS = dao.SkieurDao.getListeSkieurs(p1);
         
-    }
+    }*/
     
 }

@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package domainTest;
+package domaine;
 
 import domaine.Pays;
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 /**
  *
@@ -15,7 +19,7 @@ import org.testng.annotations.Test;
 public class PaysTest {
     Pays p, p1, p2, p3, p4;
     
-    @Test
+    @BeforeTest
     public void createPays() {
         p = new Pays("CH");
         p1 = new Pays("CH", "Suisse");
@@ -26,9 +30,14 @@ public class PaysTest {
     
     @Test
     public void testGetCode() {
-        createPays();
         if (!p.getCode().equals("CH")) {System.err.println("Error getcode --> Pays");}
         if (!p2.getCode().equals("FR")) {System.err.println("Error getcode --> Pays");}
+
+
+        Assert.assertTrue((p.getCode()).equals("CH"));
+        Assert.assertEquals(p.getCode(), "CH");
+        Assert.assertEquals(p2.getCode(), "FR");
+        Assert.assertEquals(p.getCode(), "CH");
         
     }
     
@@ -37,6 +46,9 @@ public class PaysTest {
         createPays();
         if (!p.getNom().equals("")) {System.err.println("Error getcode --> Pays");}
         if (!p2.getNom().equals("France")) {System.err.println("Error getcode --> Pays");}
+
+        Assert.assertTrue((p.getNom()).equals(""));
+        Assert.assertTrue((p1.getNom()).equals("Suisse"));
         
     }
     
@@ -48,6 +60,11 @@ public class PaysTest {
         System.err.println(p1.equals(p)?"":"Erreur equals pays");
         System.err.println(p1.equals(p3)?"Erreur equals pays":"");
         System.err.println(p4.equals(p3)?"Erreur equals pays":"");
+        Assert.assertTrue(p.equals(p1));
+        Assert.assertTrue(p1.equals(p));
+        Assert.assertFalse(p.equals(p2));
+        Assert.assertFalse(p2.equals(p1));
+        Assert.assertFalse(p4.equals(p2));
     }
     
     @Test

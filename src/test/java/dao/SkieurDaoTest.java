@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package daoTest;
+package dao;
 
-import static dao.SkieurDao.getListeSkieurs;
 import domaine.Pays;
 import java.util.ArrayList;
 import org.testng.annotations.Test;
+import org.testng.Assert;
 
 /**
  *
@@ -19,12 +19,15 @@ public class SkieurDaoTest {
     @Test
     public void testgetListeSkieurs() {
         Pays p = new Pays("CH");
+        ArrayList aLst = new ArrayList();
         try {
-            ArrayList aLst = getListeSkieurs(p);
+            aLst = dao.SkieurDao.getListeSkieurs(p);
         } catch (Exception e) {
             System.err.println("ListeSkieurs not get");
         }
+        Assert.assertEquals(aLst.size(), 10);
         
     }
+
     
 }

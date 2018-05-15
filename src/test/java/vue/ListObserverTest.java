@@ -1,11 +1,9 @@
-package vueTest;
+package vue;
 
 
 import java.awt.List;
 import java.awt.TextField;
 import org.testng.annotations.Test;
-import vue.FrmMain;
-import vue.ListObserver;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

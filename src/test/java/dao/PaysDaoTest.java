@@ -3,16 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package daoTest;
+package dao;
 
-import dao.PaysDao;
 import domaine.Pays;
 import domaine.Skieur;
 import java.io.FileReader;
-import static org.assertj.core.api.Assertions.assertThat;
-import org.testng.annotations.BeforeTest;
+import java.util.ArrayList;
 import org.testng.annotations.Test;
-import static org.mockito.Mockito.*;
+import org.testng.Assert;
+
+import static org.assertj.core.api.Assertions.assertThat;
+
+import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 
 /**
  *
@@ -24,13 +27,19 @@ public class PaysDaoTest {
     private FileReader reader;
     private Pays pays;
     private Skieur skieur;
+
     
     
-    @BeforeTest
-    public void init() {
-    
+    @Test
+    public void testgetListePays() {
+        ArrayList aLst = new ArrayList();
+        try {
+            aLst = PaysDao.getListePays();
+        } catch (Exception e) {
+            System.err.println("ListeSkieurs not get");
+        }
+        Assert.assertEquals(aLst.size(), 8);
     }
-    
     
     
 }
