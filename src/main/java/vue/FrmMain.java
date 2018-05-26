@@ -2,7 +2,6 @@ package vue;
 
 import java.util.logging.Logger;
 import metier.Model;
-import org.slf4j.LoggerFactory;
 
 
 
@@ -11,7 +10,6 @@ public class FrmMain extends java.awt.Frame {
     Model m = new Model();
     
     public FrmMain() {
-        System.out.println("This is ok");
         initComponents();
         m.addObserver(new ListObserver(lstPays, lstSkieurs, tfNo, tfNom, tfPays, tfPrenom));
         m.loadData();
@@ -134,7 +132,7 @@ public class FrmMain extends java.awt.Frame {
     }//GEN-LAST:event_lstSkieursItemStateChanged
 
     private void btnCopierActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCopierActionPerformed
-        m.copyName(lstSkieurs.getSelectedItem());// TODO add your handling code here:
+        m.copyName(lstSkieurs.getSelectedItem());
     }//GEN-LAST:event_btnCopierActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

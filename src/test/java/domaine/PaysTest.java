@@ -77,4 +77,11 @@ public class PaysTest {
         p3.toString();
     }
 
+    @Test
+    public void testHashCode () {
+        createPays();
+        Assert.assertNotNull(p4.hashCode());
+        Assert.assertNotSame(p1.hashCode(), p3.hashCode());
+    }
+
 }

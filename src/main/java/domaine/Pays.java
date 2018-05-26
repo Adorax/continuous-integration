@@ -9,7 +9,18 @@ public class Pays {
     
     public String getCode() { return code; }
     public String getNom() { return nom; }
-    
-    public boolean equals(Object obj) { return this.code.equals(((Pays)obj).code); }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && obj instanceof Pays?this.code.equals(((Pays)obj).code): null; }
     public String toString() { return nom; }
+
+    @Override
+    public int hashCode() {
+        int hash = 138;
+        hash = hash * 17 + code.hashCode();
+        hash = hash * 31 + nom.hashCode();
+        return hash;
+
+    }
 }

@@ -104,6 +104,14 @@ public class SkieurTest {
         int x = s1.getNo();
         Assert.assertEquals(x, 4);
     }
+    @Test
+    public void testHashCode() {
+        createSkieurs();
+        Assert.assertNotNull(s3.hashCode());
+        Assert.assertNotSame(s1.hashCode(), s3.hashCode());
+    }
+
+}
     /*
     public String getNom() { return nom; }
 13	1
@@ -117,4 +125,3 @@ public class SkieurTest {
 17	1
     public String toString() { return prenom+" "+nom; }
 */
-}

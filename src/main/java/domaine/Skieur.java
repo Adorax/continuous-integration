@@ -12,7 +12,19 @@ public class Skieur {
     public String getNom() { return nom; }
     public String getPrenom() { return prenom; }
     public Pays getPays() { return pays; }
-    
-    public boolean equals(Object obj) { return this.no == ((Skieur)obj).no; }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && obj instanceof Skieur?this.no == ((Skieur)obj).no: null; }
     public String toString() { return prenom+" "+nom; }
+
+    @Override
+    public int hashCode() {
+        int hash = 8;
+        hash = hash * 17 + no;
+        hash = hash * 11 + prenom.hashCode();
+        hash = hash * 31 + nom.hashCode();
+        hash = hash * 8 + pays.hashCode();
+        return hash;
+    }
 }

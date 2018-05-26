@@ -31,7 +31,6 @@ public class ListObserver implements Observer{
     @Override
     public void update(Observable o, Object arg) {
         Model m = (Model) o;
-        //LOAD = 1, SEL = 2, ADD = 3, UPD = 4, DEL = 5;
          if( (((Action)arg).getAction()) == Action.LOAD){
             listPays.removeAll();
              for (int i=0; i < m.getNbPays(); i++) {
